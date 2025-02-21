@@ -35,7 +35,7 @@
                             </div>
                         </button>
                     </h2>
-                    <div [class]="item.isActive ? 'show' : 'collapse'">
+                    <div class="acc-text" *ngIf="item.isActive">
                         <div class="accordion-body">
                             {{item.text}}
                         </div>

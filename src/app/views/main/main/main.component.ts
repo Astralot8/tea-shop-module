@@ -17,7 +17,7 @@ export class MainComponent implements OnInit, OnDestroy {
     {
       title: 'Собираете ли вы подарочные боксы?',
       text: 'Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!',
-      isActive: false
+      isActive: true
     },
     {
       title: 'Сколько у вас разновидностей чая?',
@@ -79,11 +79,7 @@ export class MainComponent implements OnInit, OnDestroy {
 
   rotateArrow(index: number): void {
     this.accordionArray.forEach((item, i)=>{
-      if(i === index) {
-        item.isActive = !item.isActive
-      } else{
-        item.isActive = false
-      }
+        item.isActive = i === index;
     })
   }
 }
